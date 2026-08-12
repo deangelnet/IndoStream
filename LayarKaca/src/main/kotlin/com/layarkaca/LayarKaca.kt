@@ -33,8 +33,8 @@ import java.nio.charset.StandardCharsets
 
 class LayarKaca : MainAPI() {
 
-    override var mainUrl = "https://lk21.film"
-    private var seriesUrl = "https://tv14.nontondrama.click"
+    override var mainUrl = "https://lk21.de"
+    private var seriesUrl = "https://tv4.nontondrama.my"
 
     override var name = "LayarKaca"
     override val hasMainPage = true
@@ -96,7 +96,7 @@ class LayarKaca : MainAPI() {
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val mainUrl = "https://tv14.nontondrama.click"
+        val mainUrl = "https://tv4.nontondrama.my"
         val encodedQuery = withContext(Dispatchers.IO) {
             URLEncoder.encode(query, StandardCharsets.UTF_8.toString())
         }
